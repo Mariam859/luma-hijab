@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMA HIJAB | Modern Modest Essentials — Cairo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ================= TOP HEADER (ALL DEVICES) ================= -->
+  <header class="site-header">
+    <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Open Navigation">
+      <i class="fa-solid fa-bars"></i>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <a href="#home" class="brand-wordmark" data-nav="home">
+      <span class="logo-main">LUMA</span>
+      <span class="logo-sub">MODEST ATELIER</span>
+    </a>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="header-wishlist-btn" aria-label="Saved Hijabs">
+        <i class="fa-regular fa-heart"></i>
+        <span class="badge-count" id="header-wishlist-count">0</span>
+      </button>
+      <button class="icon-btn" id="header-cart-btn" aria-label="Open Bag">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="badge-count" id="header-cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ================= DRAWER NAVBAR (HIDDEN UNTIL OPENED) ================= -->
+  <aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-top">
+      <div class="sidebar-head-row">
+        <a href="#home" class="brand-wordmark" data-nav="home">
+          <span class="logo-main">LUMA</span>
+          <span class="logo-sub">CAIRO</span>
+        </a>
+        <button class="close-sidebar-btn" id="close-sidebar-btn" aria-label="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Vertical Navigation -->
+      <nav class="side-nav" id="side-nav">
+        <span class="nav-group-label">Navigation</span>
+        <a href="#home" class="side-nav-link active" data-nav="home">
+          <span>Home</span>
+          <span class="nav-index">01</span>
+        </a>
+        <a href="#shop" class="side-nav-link" data-nav="shop">
+          <span>Shop All</span>
+          <span class="nav-index">02</span>
+        </a>
+        <a href="#categories" class="side-nav-link" data-nav="collections">
+          <span>Collections</span>
+          <span class="nav-index">03</span>
+        </a>
+        <a href="#fabric-guide" class="side-nav-link" data-nav="fabric-guide">
+          <span>Fabric Guide</span>
+          <span class="nav-index">04</span>
+        </a>
+        <a href="#reviews" class="side-nav-link" data-nav="reviews">
+          <span>Reviews</span>
+          <span class="nav-index">05</span>
+        </a>
+        <a href="#lookbook" class="side-nav-link" data-nav="lookbook">
+          <span>Lookbook</span>
+          <span class="nav-index">06</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-actions">
+        <button class="sidebar-action-btn" id="open-wishlist-btn" title="Saved Hijabs">
+          <span class="action-left">
+            <i class="fa-regular fa-heart"></i>
+            <span>Saved Hijabs</span>
+          </span>
+          <span class="badge-count" id="wishlist-count">0</span>
+        </button>
+
+        <button class="sidebar-action-btn bag-btn" id="open-cart-btn" title="Open Bag">
+          <span class="action-left">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shopping Bag</span>
+          </span>
+          <span class="badge-count" id="cart-count">0</span>
+        </button>
+      </div>
+
+      <div class="sidebar-note">
+        <p>Cairo Studio, Egypt</p>
+        <span>Nationwide delivery &bull; Free over 800 EGP</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- ================= EDITORIAL HERO ================= -->
+      <section class="hero view-section" id="home" data-view="home">
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <div class="hero-eyebrow anim-reveal" style="--delay: 0.05s;">
+              <span>AUTUMN / WINTER NEUTRAL EDIT</span>
+            </div>
+            <h1 class="anim-reveal" style="--delay: 0.15s;">
+              Effortless Modesty,<br />
+              <em>Woven in Calm Tones.</em>
+            </h1>
+            <p class="hero-desc anim-reveal" style="--delay: 0.25s;">
+              Breathable Egyptian cotton, weightless matte chiffon, and signature Medina silk—thoughtfully curated in timeless shades of off-white, sand, beige, and warm taupe.
+            </p>
+
+            <div class="hero-cta-group anim-reveal" style="--delay: 0.35s;">
+              <a href="#categories" class="btn btn-primary" id="hero-explore-btn">
+                Explore Collections <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <button type="button" class="btn btn-outline" data-nav-trigger="shop">
+                Shop All Hijabs
+              </button>
+            </div>
+
+            <div class="hero-metrics anim-reveal" style="--delay: 0.45s;">
+              <div class="metric-item">
+                <strong>24+</strong>
+                <span>Curated Styles</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <strong>4.9</strong>
+                <span>1,200+ Reviews</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <strong>27</strong>
+                <span>Egypt Governorates</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual anim-reveal" style="--delay: 0.25s;">
+            <div class="hero-main-frame">
+              <img
+                src="https://i.pinimg.com/1200x/c6/ea/4d/c6ea4dc2505f2a74a60daaa577f8ecdd.jpg"
+                alt="Model wearing Luma Hijab in Warm Mocha"
+              />
+            </div>
+            <div class="hero-secondary-frame anim-float">
+              <img
+                src="https://i.pinimg.com/1200x/11/b1/68/11b16899ac0f916d0416273d60b617b2.jpg"
+                alt="Soft Beige Silk Drape"
+              />
+              <div class="secondary-caption">
+                <span>Signature Piece</span>
+                <strong>Medina Silk &mdash; 350 EGP</strong>
+              </div>
+            </div>
+            <div class="hero-floating-review anim-float-slow">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>&ldquo;Doesn&rsquo;t slip at all and the warm shade is perfection.&rdquo;</p>
+              <span>Nourhan &mdash; Cairo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= COLLECTIONS  ================= -->
+      <section class="categories section-padding view-section" id="categories" data-view="collections">
+        <div class="container">
+          <div class="section-header anim-on-scroll">
+            <span class="section-tag">Signature Textures</span>
+            <h2>Shop by Collection</h2>
+            <p>Select a fabric collection to explore 8 thoughtfully curated hijab designs.</p>
+          </div>
+
+          <div class="categories-grid">
+            <article class="category-card anim-on-scroll" data-filter="chiffon">
+              <div class="category-img-wrap">
+                <img src="https://i.pinimg.com/736x/60/86/36/608636052100acf79d54e36e5ec342ec.jpg" alt="Chiffon Hijab Collection" />
+                <span class="cat-count-pill">8 Styles</span>
+              </div>
+              <div class="category-body">
+                <h3>Chiffon Collection</h3>
+                <p>Weightless, matte &amp; breezy drape for effortless daily elegance.</p>
+                <div class="cat-footer">
+                  <span class="cat-starting">From 130 EGP</span>
+                  <span class="cat-cta">Shop Chiffon <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="category-card anim-on-scroll" data-filter="cotton">
+              <div class="category-img-wrap">
+                <img src="https://i.pinimg.com/736x/7e/82/59/7e8259f6d65e6788eca34f20c46bf230.jpg" alt="Cotton Hijab Collection" />
+                <span class="cat-count-pill">8 Styles</span>
+              </div>
+              <div class="category-body">
+                <h3>Egyptian Cotton &amp; Jersey</h3>
+                <p>Pin-free comfort, opaque coverage &amp; soft natural breathability.</p>
+                <div class="cat-footer">
+                  <span class="cat-starting">From 150 EGP</span>
+                  <span class="cat-cta">Shop Cotton <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="category-card anim-on-scroll" data-filter="premium">
+              <div class="category-img-wrap">
+                <img src="https://i.pinimg.com/736x/9c/ee/43/9cee4345051eb43168982f7a639bf9bb.jpg" alt="Premium Silk and Modal Collection" />
+                <span class="cat-count-pill">8 Styles</span>
+              </div>
+              <div class="category-body">
+                <h3>Premium Modal &amp; Silk</h3>
+                <p>Luxe Medina silk, satin &amp; bamboo modal for refined occasions.</p>
+                <div class="cat-footer">
+                  <span class="cat-starting">From 300 EGP</span>
+                  <span class="cat-cta">Shop Premium <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SHOP ALL PRODUCTS (SEPARATE VIEW) ================= -->
+      <section class="shop section-padding view-section hidden-view" id="shop" data-view="shop">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">The Full Edit</span>
+            <h2>Shop All Hijabs</h2>
+            <p>Each piece comes in multiple curated neutral shades. Select any hijab to view details and add to your bag.</p>
+          </div>
+
+          <!-- Shop Controls -->
+          <div class="shop-toolbar">
+            <div class="filter-tabs" id="filter-tabs">
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="chiffon">Chiffon</button>
+              <button class="filter-btn" data-category="cotton">Cotton</button>
+              <button class="filter-btn" data-category="premium">Premium</button>
+            </div>
+
+            <div class="shop-search-sort">
+              <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="shop-search" placeholder="Search style or fabric..." />
+              </div>
+
+              <select id="shop-sort" aria-label="Sort products">
+                <option value="featured">Sort: Featured</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="results-meta">
+            <span id="results-count">Showing hijabs</span>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="products-grid" id="products-grid"></div>
+        </div>
+      </section>
+
+      <!-- ================= FABRIC GUIDE ================= -->
+      <section class="fabric-guide section-padding view-section hidden-view" id="fabric-guide" data-view="fabric-guide">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Find Your Match</span>
+            <h2>Luma Fabric Guide</h2>
+            <p>Compare drape, opacity, and styling ease across our three signature textiles.</p>
+          </div>
+
+          <div class="guide-grid">
+            <div class="guide-card">
+              <div class="guide-top">
+                <span class="guide-badge">Daily Classic</span>
+                <h3>Chiffon</h3>
+                <p class="guide-price">Starts at 130 EGP</p>
+              </div>
+              <ul class="guide-specs">
+                <li><span>Opacity</span><strong>85% (Undercap recommended)</strong></li>
+                <li><span>Drape</span><strong>Flowy &amp; Architectural</strong></li>
+                <li><span>Best For</span><strong>Work, University &amp; Summer</strong></li>
+                <li><span>Hold</span><strong>Needs 1&ndash;2 Magnetic Pins</strong></li>
+              </ul>
+              <button class="btn btn-outline full-width guide-shop-btn" data-filter="chiffon">Browse Chiffon Styles</button>
+            </div>
+
+            <div class="guide-card featured-guide">
+              <div class="guide-top">
+                <span class="guide-badge beige-badge">Most Comfortable</span>
+                <h3>Cotton &amp; Jersey</h3>
+                <p class="guide-price">Starts at 150 EGP</p>
+              </div>
+              <ul class="guide-specs">
+                <li><span>Opacity</span><strong>100% Full Coverage</strong></li>
+                <li><span>Drape</span><strong>Soft, Relaxed &amp; Non-Slip</strong></li>
+                <li><span>Best For</span><strong>All-Day Errands &amp; Travel</strong></li>
+                <li><span>Hold</span><strong>Pin-Free / Zero Slip</strong></li>
+              </ul>
+              <button class="btn btn-primary full-width guide-shop-btn" data-filter="cotton">Browse Cotton Styles</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-top">
+                <span class="guide-badge">Luxury Edit</span>
+                <h3>Premium Modal &amp; Silk</h3>
+                <p class="guide-price">Starts at 300 EGP</p>
+              </div>
+              <ul class="guide-specs">
+                <li><span>Opacity</span><strong>95% &ndash; 100% Opaque</strong></li>
+                <li><span>Drape</span><strong>Liquid, Silky &amp; Luminous</strong></li>
+                <li><span>Best For</span><strong>Dinners, Eid &amp; Formal Events</strong></li>
+                <li><span>Hold</span><strong>Smooth Stay-Put Finish</strong></li>
+              </ul>
+              <button class="btn btn-outline full-width guide-shop-btn" data-filter="premium">Browse Premium Styles</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CUSTOMER REVIEWS  ================= -->
+      <section class="reviews section-padding view-section hidden-view" id="reviews" data-view="reviews">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Loved Across Egypt</span>
+            <h2>What Our Community Says</h2>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text">
+                &ldquo;Ordered 3 chiffon hijabs in Beige and Sand to Maadi and they arrived the next morning. The matte finish doesn&rsquo;t look shiny in photos at all.&rdquo;
+              </p>
+              <div class="review-author">
+                <div class="author-avatar">NM</div>
+                <div>
+                  <strong>Nourhan Mansour</strong>
+                  <span>Verified Buyer &mdash; Cairo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text">
+                &ldquo;The Comfy Jersey Cotton is my daily uniform for university now. Zero pins needed and stays breathable even on hot Alexandria days.&rdquo;
+              </p>
+              <div class="review-author">
+                <div class="author-avatar">MK</div>
+                <div>
+                  <strong>Mariam Khaled</strong>
+                  <span>Verified Buyer &mdash; Alexandria</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text">
+                &ldquo;Bought the Medina Silk Edition for my sister&rsquo;s engagement. The champagne beige shade looks double its price and feels effortless.&rdquo;
+              </p>
+              <div class="review-author">
+                <div class="author-avatar">SH</div>
+                <div>
+                  <strong>Salma Hany</strong>
+                  <span>Verified Buyer &mdash; Giza</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LOOKBOOK ================= -->
+      <section class="lookbook section-padding view-section hidden-view" id="lookbook" data-view="lookbook">
+        <div class="container">
+          <div class="lookbook-header">
+            <div>
+              <span class="section-tag">@lumahijab.eg</span>
+              <h2>Styled by You</h2>
+            </div>
+            <button type="button" class="btn btn-outline" data-nav-trigger="shop">Shop the Looks</button>
+          </div>
+
+          <div class="lookbook-strip">
+            <img src="https://i.pinimg.com/736x/09/46/c5/0946c5abec13f6a4825a298f80d5bbef.jpg" alt="Hijab look 1" />
+            <img src="https://i.pinimg.com/736x/15/15/02/151502cabc05d637e74d936ef037c7c8.jpg" alt="Hijab look 2" />
+            <img src="https://i.pinimg.com/736x/9e/ef/6e/9eef6e2959cc550a800f9a22270bc1a7.jpg" alt="Silk texture look 3" />
+            <img src="https://i.pinimg.com/1200x/0e/ab/c1/0eabc1dcdef1930e442419ccbb6fee44.jpg" alt="Hijab look 4" />
+            <img src="https://i.pinimg.com/1200x/2c/f3/62/2cf36274e0ae1f776eddb6c864c4fc91.jpg" alt="Mocha fabric look 5" />
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= PROFESSIONAL EDITORIAL FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand-wordmark footer-wordmark" data-nav="home">
+            <span class="logo-main">LUMA</span>
+            <span class="logo-sub">MODEST ATELIER &bull; CAIRO</span>
+          </a>
+          <p class="footer-mission">
+            Dedicated to thoughtful modest design. We curate breathable, non-slip hijabs in serene neutral palettes crafted to elevate your everyday wardrobe with quiet elegance.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home" onclick="switchView('home'); return false;">Home</a></li>
+            <li><a href="#shop" onclick="switchView('shop'); return false;">Shop All Hijabs</a></li>
+            <li><a href="#fabric-guide" onclick="switchView('fabric-guide'); return false;">Fabric Guide</a></li>
+            <li><a href="#reviews" onclick="switchView('reviews'); return false;">Client Reviews</a></li>
+            <li><a href="#lookbook" onclick="switchView('lookbook'); return false;">Seasonal Lookbook</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="#shop" onclick="navigateToFilter('chiffon'); return false;">Matte Chiffon Edit</a></li>
+            <li><a href="#shop" onclick="navigateToFilter('cotton'); return false;">Egyptian Cotton &amp; Jersey</a></li>
+            <li><a href="#shop" onclick="navigateToFilter('premium'); return false;">Medina Silk &amp; Modal</a></li>
+            <li><a href="#fabric-guide" onclick="switchView('fabric-guide'); return false;">Textile Care &amp; Drape</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Client Concierge</h4>
+          <p>
+            Need styling advice or help choosing the right fabric for your day? Reach our Cairo atelier team directly on WhatsApp.
+          </p>
+          <button type="button" class="btn btn-primary footer-wa-btn" onclick="openWhatsAppWidget()">
+            <i class="fa-brands fa-whatsapp"></i> Chat With Stylist
+          </button>
+          <div class="footer-studio-meta">
+            <span><i class="fa-regular fa-clock"></i> Sat &ndash; Thu: 10 AM &ndash; 8 PM EET</span>
+            <span><i class="fa-regular fa-envelope"></i> concierge@lumahijab.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; 2026 LUMA HIJAB. All rights reserved.</p>
+          <span>Crafted for Modern Modesty &bull; Cairo, Egypt</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= PRODUCT DETAIL VIEW MODAL ================= -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-box product-modal-box">
+      <button class="close-modal" id="close-product-modal" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="product-modal-grid">
+        <div class="product-modal-media">
+          <img id="modal-img" src="" alt="Hijab Preview" />
+          <span class="modal-stock-pill"><i class="fa-solid fa-circle-check"></i> In Stock &mdash; Ready to Ship</span>
+        </div>
+
+        <div class="product-modal-details">
+          <div class="modal-breadcrumb" id="modal-breadcrumb">Shop / Chiffon</div>
+          <div class="modal-title-row">
+            <h2 id="modal-title">Product Title</h2>
+            <span class="modal-badge" id="modal-badge">Best Seller</span>
+          </div>
+
+          <div class="modal-rating-price">
+            <p class="modal-price" id="modal-price">130 EGP</p>
+            <span class="modal-rating" id="modal-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+          </div>
+
+          <p class="modal-desc" id="modal-desc"></p>
+          <div class="modal-specs" id="modal-specs"></div>
+
+          <div class="available-shades">
+            <p class="shades-heading">Available in multiple curated neutral shades:</p>
+            <div class="shade-palette-list" id="modal-shade-list"></div>
+          </div>
+
+          <div class="modal-purchase-row">
+            <div class="modal-qty-selector">
+              <button type="button" id="qty-minus" aria-label="Decrease quantity">-</button>
+              <span id="modal-qty-val">1</span>
+              <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button class="btn btn-primary modal-action-btn" id="modal-add-to-cart">
+              <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+            </button>
+          </div>
+
+          <button class="btn btn-dark full-width buy-now-btn" id="modal-buy-now">
+            Buy Now &mdash; Instant Checkout <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="related-section">
+        <h4>Pair With These Styles</h4>
+        <div class="related-grid" id="related-products"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SHOPPING CART DRAWER ================= -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Shopping Bag</h3>
+      <button class="close-cart" id="close-cart-btn" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="shipping-bar-wrap">
+      <p id="shipping-progress-text">Add 800 EGP for Free Egypt Delivery</p>
+      <div class="shipping-progress-track">
+        <div class="shipping-progress-fill" id="shipping-progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-totals">
+        <div class="cart-subtotal-line main-total">
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">0 EGP</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary full-width" id="proceed-checkout-btn">
+        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= CHECKOUT MODAL ================= -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-box checkout-modal-box">
+      <button class="close-modal" id="close-checkout-modal" aria-label="Close Checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="checkout-form-view">
+        <div class="checkout-header">
+          <span class="section-tag">Egypt Express Delivery</span>
+          <h2>Complete Your Order</h2>
+        </div>
+
+        <div class="checkout-items-preview" id="checkout-items-preview"></div>
+
+        <form id="checkout-form" class="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customer-name">Full Name</label>
+              <input type="text" id="customer-name" placeholder="e.g. Salma Ahmed" required />
+            </div>
+
+            <div class="form-group">
+              <label for="customer-phone">WhatsApp / Mobile Number</label>
+              <input type="tel" id="customer-phone" placeholder="010xxxxxxxx" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="governorate">Governorate (Egypt)</label>
+              <select id="governorate" required>
+                <option value="" disabled selected>Select Governorate</option>
+                <option value="50" data-name="Cairo">Cairo (50 EGP &bull; 1&ndash;2 days)</option>
+                <option value="50" data-name="Giza">Giza (50 EGP &bull; 1&ndash;2 days)</option>
+                <option value="65" data-name="Alexandria">Alexandria (65 EGP &bull; 2&ndash;3 days)</option>
+                <option value="65" data-name="Delta">Delta (Mansoura, Tanta, Zagazig) (65 EGP)</option>
+                <option value="75" data-name="Canal">Canal Cities (Port Said, Ismailia, Suez) (75 EGP)</option>
+                <option value="85" data-name="Upper Egypt">Upper Egypt (Assiut, Minya, Luxor, Aswan) (85 EGP)</option>
+                <option value="90" data-name="Red Sea & Sinai">Red Sea &amp; Sinai (Hurghada, Sharm) (90 EGP)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="payment-method">Payment Method</label>
+              <select id="payment-method" required>
+                <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                <option value="InstaPay">InstaPay Transfer</option>
+                <option value="Vodafone Cash">Vodafone Cash</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-address">Street Address &amp; Landmark</label>
+            <input type="text" id="customer-address" placeholder="Area, Street name, Building, Floor &amp; Apt" required />
+          </div>
+
+          <div class="checkout-summary">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal">0 EGP</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span id="checkout-shipping">0 EGP</span>
+            </div>
+            <div class="summary-row total-row">
+              <strong>Total</strong>
+              <strong id="checkout-total">0 EGP</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">
+            Confirm Order <i class="fa-solid fa-check"></i>
+          </button>
+        </form>
+      </div>
+
+      <div id="checkout-success-view" class="checkout-success hidden">
+        <div class="success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <span class="section-tag">Order Confirmed</span>
+        <h2>Thank you, <span id="success-customer-name">Guest</span></h2>
+        <p>Your Luma Hijab order <strong id="order-number">#LM-4821</strong> is confirmed and being prepared in our Cairo studio.</p>
+        <div class="success-details">
+          <div><span>Delivering to</span><strong id="success-gov">Cairo</strong></div>
+          <div><span>Total Amount</span><strong id="success-total">0 EGP</strong></div>
+        </div>
+        <button class="btn btn-primary full-width" id="continue-shopping-btn">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= WHATSAPP CUSTOMER SUPPORT WIDGET ================= -->
+  <div class="wa-widget" id="wa-widget">
+    <div class="wa-header">
+      <div class="wa-agent">
+        <div class="wa-avatar"><i class="fa-brands fa-whatsapp"></i></div>
+        <div>
+          <h4>Luma WhatsApp Support</h4>
+          <span>Online &mdash; Replies promptly</span>
+        </div>
+      </div>
+      <div class="wa-header-actions">
+        <a
+          id="wa-direct-link"
+          href="https://wa.me/201000000000?text=Hello%20Luma%20Hijab!%20I%20would%20like%20help%20with%20an%20order."
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open WhatsApp App"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <button id="close-wa-btn" aria-label="Close Chat">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="wa-messages" id="wa-messages">
+      <div class="wa-msg bot">
+        <p>Welcome to <strong>Luma Hijab</strong> on WhatsApp. How can we assist you today? Pick a quick topic or message us directly.</p>
+        <span class="wa-time">Just now</span>
+      </div>
+    </div>
+
+    <div class="wa-quick-replies" id="wa-quick-replies">
+      <button type="button" data-topic="shipping">Delivery Rates</button>
+      <button type="button" data-topic="fabric">Pick a Fabric</button>
+      <button type="button" data-topic="cart">Send Bag to WhatsApp</button>
+    </div>
+
+    <form class="wa-input-bar" id="wa-chat-form">
+      <input type="text" id="wa-input" placeholder="Message Luma on WhatsApp..." autocomplete="off" />
+      <button type="submit" id="wa-send-btn" aria-label="Send message">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Floating WhatsApp Trigger -->
+  <button class="whatsapp-float" id="wa-toggle-btn" aria-label="Open Luma Hijab WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-tooltip">WhatsApp Us</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
